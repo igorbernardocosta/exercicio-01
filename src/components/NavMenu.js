@@ -1,4 +1,6 @@
 import React from "react";
+import "./NavMenu.css";
+
 
 export const NavMenu = (props) => (
   <nav className="main-nav">

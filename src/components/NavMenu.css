@@ -1,0 +1,11 @@
+.main-nav {
+    text-align: center;
+    width: 100vw;
+}
+
+.main-nav li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}

@@ -6,3 +6,15 @@
   width: 80%;
   text-align: right;
 }
+
+.main-body{
+  display: flex;
+}
+
+.main-article {
+  width: 80vw;
+}
+
+.main-sidebar{
+  width: 20vw;
+}
