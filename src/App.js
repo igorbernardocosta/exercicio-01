@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import "./App.css";
+import { MainMenu } from "./components/MainMenu";
+import { NavMenu } from "./components/NavMenu";
+import { SearchBar } from "./components/SearchBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  state = {
+    menuItems: [
+      { title: 'Google', link: 'https://google.com' },
+      { title: 'Apple', link: 'https://apple.com/br' },
+      { title: 'Microsoft', link: 'https://microsoft.com' },
+      { title: 'PUC Minas', link: 'https://pucminas.br' },
+    ],
+  }
+
+  render() {
+    return (
+      <>
+        <header className="main-header">
+          <div className="main-logo">
+            <h1>Logo</h1>
+          </div>
+
+          <div className="header-info">
+            <MainMenu />
+            <SearchBar />
+          </div>
+        </header>
+
+        <NavMenu items={this.state.menuItems} />
+      </>
+    );
+  }
 }
-
-export default App;
